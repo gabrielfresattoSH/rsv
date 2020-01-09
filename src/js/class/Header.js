@@ -5,6 +5,7 @@ export default class Header {
   constructor() {
     this.gridHeader();
     this.moveSearchBar();
+    this.loginButtonConfig();
     this.juniCart();
 
     // Atualiza o carrinho
@@ -26,7 +27,7 @@ export default class Header {
                     </button>
                 </div>
                 <div class="juni-login-buy">
-                    <button type="button" class="no-border">
+                    <button type="button" class="no-border" id="login-btn">
                         Entrar
                     </button>
                     <button class="bordered buy" id="juni-cart-btn">
@@ -60,6 +61,39 @@ export default class Header {
     );
   }
 
+  async loginButtonConfig() {
+    function openLoginModal() {
+      // Clique no botão original "minha conta"
+      document.getElementById("CC-loginHeader-login").click();
+    }
+    const userLogged = !!JSON.parse(localStorage.getItem("user"))
+      .loggedInUserName;
+    waitForElement(() => document.getElementById("login-btn")).then(
+      btnLogin => {
+        // Se o usuário estiver logado
+        // altera as ações ao clicar no botão
+        if (!userLogged) {
+          btnLogin.innerText = "Entrar";
+          btnLogin.addEventListener("click", openLoginModal);
+        } else {
+          wait(
+            () => !!JSON.parse(localStorage.getItem("user")).loggedInUserName
+          ).then(() => {
+            btnLogin.innerText = JSON.parse(
+              localStorage.getItem("user")
+            ).loggedInUserName;
+            btnLogin.removeEventListener("click", openLoginModal);
+
+            btnLogin.addEventListener(
+              "click",
+              () => (location.href = "/profile?module=home-profile")
+            );
+          });
+        }
+      }
+    );
+  }
+
   // Listener no botão da sacola
   juniCart() {
     waitForElement(() => document.getElementById("juni-cart-btn")).then(
@@ -71,6 +105,7 @@ export default class Header {
       }
     );
   }
+
   waitForBagChange() {
     // Aguarda ter algo no localStorage de carrinho
     wait(() => !!localStorage.getItem("shoppingCart")).then(() => {
