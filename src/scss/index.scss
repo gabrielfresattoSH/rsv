@@ -1,4 +1,5 @@
-$fontSizeHeader: 9px;
+$fontSizeHeader: 11px;
+$headerHeight: 45px;
 
 // Cores
 $c_red: #bf0000;
@@ -12,14 +13,60 @@ $c_red: #bf0000;
   top: 3rem;
 }
 
+#CustomHeader_v1-wi600146 .menu_bar {
+  height: 40px !important;
+}
+
+#CustomHeader_v1-wi600146 .menu {
+  display: none;
+}
+
+#CustomHeader_v1-wi600146 .mini .menu_bar {
+  height: 0 !important;
+}
+
 // teste
 .juni-new-header-desktop {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 15px;
-  height: 45px;
-  border-bottom: 1px solid #eee;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1010;
+  width: 100%;
+
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: $headerHeight;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+    background: #fff;
+  }
+  #menu {
+    .menu-content {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: flex;
+      margin-left: 1rem;
+      height: $headerHeight;
+      align-items: center;
+
+      li {
+        border-bottom: 2px solid;
+        border-color: transparent;
+        margin: 0 10px 0 0;
+        padding: 0 5px;
+        font-size: $fontSizeHeader;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 200ms;
+
+        &.active {
+          border-color: #333;
+        }
+      }
+    }
+  }
 
   //   Barra de busca
   #juni-search-bar {
@@ -29,7 +76,15 @@ $c_red: #bf0000;
     border-radius: 3px;
     flex: 1;
     margin: 0 10px;
-    padding: 0 15px;
+    padding: 0px 15px 0 20px;
+    position: relative;
+
+    .lupa {
+      width: 12px;
+      position: absolute;
+      left: 5px;
+      top: 6px;
+    }
 
     #CC-headerWidget-Search {
       flex: 1;
@@ -37,7 +92,7 @@ $c_red: #bf0000;
       display: flex;
       align-items: center;
       padding: 0;
-      font-size: 11px;
+      font-size: $fontSizeHeader;
       border: none;
     }
 
@@ -78,6 +133,10 @@ $c_red: #bf0000;
       text-transform: uppercase;
       background: #fff;
 
+      > span {
+        margin: 0 5px;
+      }
+
       .cart-amount {
         font-size: $fontSizeHeader;
         background: $c_red;
@@ -85,10 +144,159 @@ $c_red: #bf0000;
         width: 15px;
         height: 15px;
         color: #fff;
-        margin-left: 6px;
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+    }
+  }
+
+  .sub-itens-container {
+    display: none;
+    transition: 200ms ease-out;
+    height: 0;
+    background: #fff;
+    padding: 25px 15px 25px 100px;
+    border-bottom: 1px solid #eee;
+
+    .content {
+      opacity: 0;
+      visibility: hidden;
+
+      .row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .first-half {
+          width: 60%;
+          min-height: 400px;
+          max-height: 400px;
+          overflow: auto;
+
+          /* width */
+          &::-webkit-scrollbar {
+            width: 3px;
+          }
+
+          /* Track */
+          &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+          }
+
+          /* Handle */
+          &::-webkit-scrollbar-thumb {
+            background: #888;
+          }
+
+          /* Handle on hover */
+          &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+          }
+        }
+
+        .second-half {
+          width: 40%;
+          min-height: 300px;
+        }
+      }
+
+      .itens {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+
+        > div {
+          display: flex;
+          flex-direction: column;
+
+          h3 {
+            font-size: $fontSizeHeader;
+            margin: 0;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-weight: bold;
+          }
+
+          a {
+            font-size: 10px;
+            color: #333;
+            width: fit-content;
+          }
+        }
+      }
+
+      .foto {
+        padding-left: 2rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+        .foto-content {
+          position: absolute;
+          bottom: 30px;
+          left: 30px;
+          display: flex;
+          flex-direction: column;
+          display: none;
+
+          > h1 {
+            color: #fff;
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+          }
+
+          > p {
+            color: #fff;
+            margin: 5px 0 15px;
+            font-size: 14px;
+          }
+
+          &.dark {
+            display: flex;
+            h1,
+            p {
+              color: #000;
+            }
+          }
+
+          &.light {
+            display: flex;
+            h1,
+            p {
+              color: #fff;
+            }
+          }
+
+          .ver-produtos {
+            background-color: #fff;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 4px;
+            width: 200px;
+          }
+        }
+      }
+    }
+
+    &.visible {
+      min-height: 300px;
+      height: fit-content;
+      max-height: 500px;
+      display: block;
+      // overflow: auto;
+
+      .content {
+        opacity: 1;
+        visibility: visible;
       }
     }
   }

@@ -1,8 +1,16 @@
 import waitForElement from "../../utils/waitForElement";
 import wait from "../../utils/wait";
+import Menu from "./Menu/index";
 
 export default class Header {
   constructor() {
+    this.images = {
+      logoReduzido: "http://juni.com.br/img/reserva/logo-reduzido-reserva.svg",
+      logoReservaMini: "http://juni.com.br/img/reserva/reserva-mini.svg",
+      lupa: "http://juni.com.br/img/reserva/search.svg",
+      cart: "http://juni.com.br/img/reserva/bag-icon.svg"
+    };
+
     this.gridHeader();
     this.moveSearchBar();
     this.loginButtonConfig();
@@ -15,32 +23,61 @@ export default class Header {
 
   // Cria todo o grid do header
   async gridHeader() {
+    const { logoReduzido, cart: cartLogo, lupa } = this.images;
     await waitForElement(() => document.querySelector(".menu_bar")).then(
       refElem => {
         const html = `
             <header class="juni-new-header-desktop">
-                <img src="" alt="Logo mini reserva" class="logo-mini-rsv" />
-                <div id="menu">Here comes the menu</div>
+              <div class="main-content">
+                <img src="${logoReduzido}" alt="Logo mini reserva" class="logo-mini-rsv" />
+                <div id="menu"></div>
                 <div id="juni-search-bar">
-                    <button id="btn-search-copy" type="button">
-                        buscar
-                    </button>
+                  <img src="${lupa}" alt="lupa" class="lupa" />
+                  <button id="btn-search-copy" type="button">
+                      buscar
+                  </button>
                 </div>
                 <div class="juni-login-buy">
                     <button type="button" class="no-border" id="login-btn">
                         Entrar
                     </button>
                     <button class="bordered buy" id="juni-cart-btn">
+                        <img src="${cartLogo}" alt="Logo mini reserva" class="logo-mini-rsv" />
                         <span>Comprar</span>
                         <span id="juniBagAmount" class="cart-amount">
                             3
                         </span>
                     </button>
                 </div>
+              </div>
+              <div class="sub-itens-container" id="subs">
+                <div class="content">
+                  <div class="row">
+                    <div class="first-half itens">
+                      <h2>SALVE</h2>
+                    </div>
+                    <div class="second-half foto">
+                      <div class="foto-content">
+                        <h1 class="title">Reserva</h1>
+                        <p class="description">
+                          Confira os destaques <br>
+                          da nossa coleção.
+                        </p>
+                        <a href="" class="ver-produtos" title="Ver produtos">
+                          Ver produtos >
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </header>
         `;
 
         refElem.insertAdjacentHTML("beforebegin", html);
+
+        // Insere o menu no novo header
+        new Menu("#menu");
       }
     );
   }
