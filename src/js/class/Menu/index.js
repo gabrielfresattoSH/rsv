@@ -44,7 +44,15 @@ export default class Menu {
     });
   }
 
+  // Altera a padding do submenu, pra ficar alinhado com os
+  // itens do header (novidade, masculino, etc..)
+  setPaddingSubMenu() {
+    const pdLeft = document.querySelector("#menu ul li").offsetLeft;
+    document.querySelector("#subs").style.paddingLeft = pdLeft + 5 + "px";
+  }
+
   openSubSubmenu(_itens, bannerInfo, title) {
+    this.setPaddingSubMenu();
     function fotoClass(txt) {
       if (txt === "Ofertas") {
         return "ofertas";
