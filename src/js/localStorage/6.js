@@ -2,15 +2,12 @@ const ofertas = [
   {
     title: "Ofertas",
     bannerInfo: {
-      img:
-        "https://images.pexels.com/photos/3473569/pexels-photo-3473569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: "http://juni.com.br/img/reserva/T011/ofertas.png",
       header: "Descontos irresistíveis",
       description: "Pra não deixar nenhuma peça no carrinho",
       url: "",
       theme: "dark"
     },
-    bannerSrc:
-      "https://images.pexels.com/photos/3473569/pexels-photo-3473569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     itens: [
       {
         title: "Ofertas",

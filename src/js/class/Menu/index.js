@@ -1,4 +1,4 @@
-import itens from "./data/itens";
+// import itens from "./data/itens";
 
 export default class Menu {
   constructor(containerSelector) {
@@ -8,6 +8,7 @@ export default class Menu {
 
   init() {
     const { container } = this;
+    const itens = JSON.parse(localStorage.getItem("t011_itens_menu"));
     const subs = document.getElementById("subs");
     // Cria a ul que vai conter os itens do menu
     container.insertAdjacentHTML(

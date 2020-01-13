@@ -2,16 +2,13 @@ const masculino = [
   {
     title: "Masculino",
     bannerInfo: {
-      img:
-        "https://images.pexels.com/photos/3473569/pexels-photo-3473569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: "http://juni.com.br/img/reserva/T011/masculino.png",
       header: "Livre pra ser",
       description:
         "Escolha as peças que foram desenvolvidas<br>para o seu corpo e estilo",
       url: "",
       theme: "light"
     },
-    bannerSrc:
-      "https://images.pexels.com/photos/3457299/pexels-photo-3457299.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     itens: [
       {
         title: "Roupas",

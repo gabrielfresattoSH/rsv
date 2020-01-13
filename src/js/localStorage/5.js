@@ -2,16 +2,13 @@ const customize = [
   {
     title: "Customize",
     bannerInfo: {
-      img:
-        "https://images.pexels.com/photos/3473569/pexels-photo-3473569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: "http://juni.com.br/img/reserva/T011/customize.png",
       header: "Você é quem manda",
       description:
         "Personalize camisetas como quiser: <br>cor, estampa, tamanho e quantidade",
       url: "",
       theme: "dark"
     },
-    bannerSrc:
-      "https://images.pexels.com/photos/3473569/pexels-photo-3473569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     itens: [
       {
         title: "Camisetas",

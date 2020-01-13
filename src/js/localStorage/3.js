@@ -2,8 +2,7 @@ const infantil = [
   {
     title: "Infantil",
     bannerInfo: {
-      img:
-        "https://images.pexels.com/photos/3473569/pexels-photo-3473569.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: "http://juni.com.br/img/reserva/T011/infantil.png",
       header: "A gente cresce junto",
       description: "O melhor estilo Reserva<br>para o seu pequeno",
       url: "",
