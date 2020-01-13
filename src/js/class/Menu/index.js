@@ -38,15 +38,36 @@ export default class Menu {
         subs.classList.add("visible");
 
         if (itens) {
-          this.openSubSubmenu(itens, bannerInfo);
+          this.openSubSubmenu(itens, bannerInfo, title);
         }
       });
     });
   }
 
-  openSubSubmenu(_itens, bannerInfo) {
+  openSubSubmenu(_itens, bannerInfo, title) {
+    function fotoClass(txt) {
+      if (txt === "Ofertas") {
+        return "ofertas";
+      }
+
+      if (txt === "Masculino") {
+        return "masculino";
+      }
+      if (txt === "Infantil") {
+        return "infantil";
+      }
+      if (txt === "Parcerias & Colabes") {
+        return "parcerias";
+      }
+      if (txt === "Customize") {
+        return "customize";
+      }
+    }
+
+    const _class = fotoClass(title);
     const container = document.querySelector("#subs .itens");
     const fotoContainer = document.querySelector("#subs .foto");
+    fotoContainer.classList = "second-half foto " + _class;
     // Limpa qualquer conteudo anterior
     container.innerHTML = "";
 

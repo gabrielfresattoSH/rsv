@@ -12,7 +12,7 @@ export default class Header {
     };
 
     this.gridHeader();
-    this.moveSearchBar();
+    this.searchBar();
     this.loginButtonConfig();
     this.juniCart();
 
@@ -23,13 +23,22 @@ export default class Header {
 
   // Cria todo o grid do header
   async gridHeader() {
-    const { logoReduzido, cart: cartLogo, lupa } = this.images;
+    const { logoReduzido, logoReservaMini, cart: cartLogo, lupa } = this.images;
     await waitForElement(() => document.querySelector(".menu_bar")).then(
       refElem => {
+        const isMini = window.location.href.includes("/infantil");
         const html = `
             <header class="juni-new-header-desktop">
               <div class="main-content">
-                <img src="${logoReduzido}" alt="Logo mini reserva" class="logo-mini-rsv" />
+                <a href="${
+                  isMini
+                    ? "https://www.usereserva.com/c/infantil/navega%C3%A7%C3%A3o-na-vitrine/infantil"
+                    : "https://www.usereserva.com/"
+                }" title="Ir para a home">
+                  <img src="${
+                    isMini ? logoReservaMini : logoReduzido
+                  }" alt="Logo mini reserva" class="logo-mini-rsv" />
+                </a>
                 <div id="menu"></div>
                 <div id="juni-search-bar">
                   <img src="${lupa}" alt="lupa" class="lupa" />
@@ -39,15 +48,15 @@ export default class Header {
                 </div>
                 <div class="juni-login-buy">
                     <button type="button" class="no-border" id="login-btn">
-                        Entrar
+                      Entrar
                     </button>
-                    <button class="bordered buy" id="juni-cart-btn">
-                        <img src="${cartLogo}" alt="Logo mini reserva" class="logo-mini-rsv" />
-                        <span>Comprar</span>
-                        <span id="juniBagAmount" class="cart-amount">
-                            3
-                        </span>
-                    </button>
+                    <a href="/cart" class="bordered buy" id="juni-cart-btn">
+                      <img src="${cartLogo}" alt="Logo mini reserva" class="logo-mini-rsv" />
+                      <span>Comprar</span>
+                      <span id="juniBagAmount" class="cart-amount">
+                        3
+                      </span>
+                    </a>
                 </div>
               </div>
               <div class="sub-itens-container" id="subs">
@@ -83,16 +92,24 @@ export default class Header {
   }
 
   // Move a busca pro novo menu
-  async moveSearchBar() {
+  async searchBar() {
     waitForElement(() => document.getElementById("juni-search-bar")).then(
       async juniSearchContainer => {
         await waitForElement(() =>
           document.getElementById("CC-headerWidget-Search")
         ).then(defaultSearchInput => {
+          defaultSearchInput.placeholder = "";
           juniSearchContainer.insertAdjacentElement(
             "afterbegin",
             defaultSearchInput
           );
+
+          // Click no botão buscar
+          document
+            .querySelector("#btn-search-copy")
+            .addEventListener("click", () => {
+              document.getElementById("searchSubmit").click();
+            });
         });
       }
     );

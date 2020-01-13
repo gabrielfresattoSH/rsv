@@ -1,6 +1,9 @@
 import Header from "./js/class/Header";
 import "./scss/index.scss";
 
+// Cria o localStorage
+// import "./js/localStorage/index";
+
 // Vai determinar se o menu deve ou não ser montado
 function shouldBuild() {
   const url = location.href;
@@ -8,7 +11,7 @@ function shouldBuild() {
 
   // Não pode ser renderizado na página de carrinho
   // e não pode existir o menu
-  return !url.includes("/cart") && !menu;
+  return !url.includes("/cart") && !menu && !url.includes("/ahlma");
 }
 
 function OnLocationChange(_callback) {

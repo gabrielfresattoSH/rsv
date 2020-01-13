@@ -21,8 +21,16 @@ $c_red: #bf0000;
   display: none;
 }
 
-#CustomHeader_v1-wi600146 .mini .menu_bar {
+#CustomHeader_v1-wi600146 .mini {
   height: 0 !important;
+
+  .menu_bar {
+    height: 0 !important;
+  }
+}
+
+#searchSubmit {
+  display: none;
 }
 
 // teste
@@ -40,6 +48,10 @@ $c_red: #bf0000;
     border-bottom: 1px solid #eee;
     align-items: center;
     background: #fff;
+
+    > a img {
+      width: 40px;
+    }
   }
   #menu {
     .menu-content {
@@ -75,8 +87,8 @@ $c_red: #bf0000;
     border: 1px solid #eee;
     border-radius: 3px;
     flex: 1;
-    margin: 0 10px;
-    padding: 0px 15px 0 20px;
+    margin: 0 25px;
+    padding-left: 20px;
     position: relative;
 
     .lupa {
@@ -104,6 +116,7 @@ $c_red: #bf0000;
       font-weight: 100;
       cursor: pointer;
       font-size: $fontSizeHeader;
+      padding: 0 15px;
     }
   }
 
@@ -156,7 +169,7 @@ $c_red: #bf0000;
     transition: 200ms ease-out;
     height: 0;
     background: #fff;
-    padding: 25px 15px 25px 100px;
+    padding: 25px;
     border-bottom: 1px solid #eee;
 
     .content {
@@ -181,17 +194,17 @@ $c_red: #bf0000;
 
           /* Track */
           &::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            background: #fff;
           }
 
           /* Handle */
           &::-webkit-scrollbar-thumb {
-            background: #888;
+            background: #c5c5c5;
           }
 
           /* Handle on hover */
           &::-webkit-scrollbar-thumb:hover {
-            background: #555;
+            background: #c5c5c5;
           }
         }
 
@@ -232,6 +245,27 @@ $c_red: #bf0000;
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
+
+        &.ofertas {
+          background-size: cover;
+          background-position: center -100px;
+        }
+
+        &.customize {
+          background-size: 200%;
+          background-position: -1px -56px;
+        }
+
+        &.parcerias {
+          background-size: 142%;
+          background-position: -240px -600px;
+        }
+
+        &.infantil,
+        &.masculino {
+          background-size: 130%;
+          background-position: -1px -30px;
+        }
 
         .foto-content {
           position: absolute;
