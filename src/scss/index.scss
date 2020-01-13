@@ -50,7 +50,8 @@ $c_red: #bf0000;
     background: #fff;
 
     > a img {
-      width: 40px;
+      width: 35px;
+      margin-right: 1rem;
     }
   }
   #menu {
@@ -145,6 +146,7 @@ $c_red: #bf0000;
       font-size: $fontSizeHeader;
       text-transform: uppercase;
       background: #fff;
+      margin-left: 1rem;
 
       > span {
         margin: 0 5px;
