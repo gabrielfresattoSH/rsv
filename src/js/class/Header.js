@@ -104,11 +104,20 @@ export default class Header {
             defaultSearchInput
           );
 
+          const defaultSearchBtn = document.getElementById("searchSubmit");
+          // Quando teclar ENTER, realizar a busca
+          document
+            .getElementById("CC-headerWidget-Search")
+            .addEventListener(
+              "keyup",
+              e => e.key === "Enter" && defaultSearchBtn.click()
+            );
+
           // Click no botão buscar
           document
             .querySelector("#btn-search-copy")
             .addEventListener("click", () => {
-              document.getElementById("searchSubmit").click();
+              defaultSearchBtn.click();
             });
         });
       }

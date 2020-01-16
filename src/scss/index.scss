@@ -33,8 +33,10 @@ $c_red: #bf0000;
   display: none;
 }
 
-.rr_auto_complete_search.visible {
-  margin-top: 33px;
+.form {
+  .rr_auto_complete_search {
+    margin-top: 33px !important;
+  }
 }
 
 // teste
