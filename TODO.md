@@ -1,8 +1,8 @@
-## Aumentar tamanho fontes das sub-categorias no drop do menu
+## Aumentar tamanho fontes das sub-categorias no drop do menu - OK
 
 ## Vamos limitar a quantidade de links por coluna destacando as principais e no fim usar ver todos que terá link da categoria pai, nesse exemplo iria para calçados.
 
-## As categorias são divididas em colunas não podemos ter 2 linhas de altura - vamos entender como reduzir a quantidade de colunas para caber se necessário retirar ou diminuir a foto. Vou alinhar com time comercial. Umas das soluções pode ser diminuir o espaço entre as colunas. no meu layout é algo próximo de 50 px. Aqui está com mais de 200px.
+## As categorias são divididas em colunas não podemos ter 2 linhas de altura - vamos entender como reduzir a quantidade de colunas para caber se necessário retirar ou diminuir a foto. Vou alinhar com time comercial. Umas das soluções pode ser diminuir o espaço entre as colunas. no meu layout é algo próximo de 50 px. Aqui está com mais de 200px. -- OK
 
 ## Ajustar crop da foto para mostrar o produto em ofertas (Foto do cara, mostrar a camisa do maluco)
 

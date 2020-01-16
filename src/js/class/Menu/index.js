@@ -29,6 +29,19 @@ export default class Menu {
       menuContent.insertAdjacentElement("beforeend", li);
 
       li.addEventListener("mouseover", e => {
+        // Verifica se é infantil, caso seja, aumenta o width do conteúdo
+        // de dentro do menu
+        const infantil = e.target.innerText.toLowerCase().includes("infantil");
+        const menuContentFHalf = document.querySelector(".first-half");
+
+        if (infantil) {
+          menuContentFHalf.classList.add("infantil");
+        } else {
+          const hasInfantil = menuContentFHalf.classList.contains("infantil");
+          if (hasInfantil) {
+            menuContentFHalf.classList.remove("infantil");
+          }
+        }
         // remove todos os links que possam estar com a classe active
         document
           .querySelectorAll(".active")

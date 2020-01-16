@@ -164,10 +164,9 @@ export default class Header {
   juniCart() {
     waitForElement(() => document.getElementById("juni-cart-btn")).then(
       juniCartBtn => {
-        juniCartBtn.addEventListener(
-          "mouseover",
-          () => (document.querySelector(".content").style.display = "block")
-        );
+        juniCartBtn.addEventListener("mouseover", () => {
+          document.querySelector(".content").style.display = "block";
+        });
       }
     );
   }
