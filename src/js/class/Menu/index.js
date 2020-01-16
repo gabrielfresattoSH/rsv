@@ -83,7 +83,7 @@ export default class Menu {
     _itens.forEach(i => {
       const { title, itens: subItens, href } = i;
       const div = document.createElement("div");
-      div.innerHTML = "<h3>" + title + "</h3>";
+      div.innerHTML = "<a href=" + href + " class='sub-ttl'>" + title + "</a>";
 
       if (subItens) {
         subItens.forEach(sub => {

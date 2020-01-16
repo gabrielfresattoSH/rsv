@@ -119,30 +119,42 @@ export default class Header {
     function openLoginModal() {
       // Clique no botão original "minha conta"
       document.getElementById("CC-loginHeader-login").click();
+      waitForLogin();
     }
-    const userLogged = !!JSON.parse(localStorage.getItem("user"))
-      .loggedInUserName;
-    waitForElement(() => document.getElementById("login-btn")).then(
-      btnLogin => {
-        // Se o usuário estiver logado
-        // altera as ações ao clicar no botão
-        if (!userLogged) {
-          btnLogin.innerText = "Entrar";
-          btnLogin.addEventListener("click", openLoginModal);
-        } else {
-          wait(
-            () => !!JSON.parse(localStorage.getItem("user")).loggedInUserName
-          ).then(() => {
-            btnLogin.innerText = JSON.parse(
-              localStorage.getItem("user")
-            ).loggedInUserName;
-            btnLogin.removeEventListener("click", openLoginModal);
 
-            btnLogin.addEventListener(
+    function waitForLogin() {
+      wait(() => JSON.parse(localStorage.getItem("user"))).then(() => {
+        wait(
+          () => JSON.parse(localStorage.getItem("user")).loggedInUserName
+        ).then(() => {
+          const btnLoginCustom = document.getElementById("login-btn");
+          btnLoginCustom.innerText = JSON.parse(
+            localStorage.getItem("user")
+          ).loggedInUserName;
+
+          btnLoginCustom.addEventListener(
+            "click",
+            () => (window.location.href = "/profile?module=home-profile")
+          );
+        });
+      });
+    }
+
+    await waitForElement(() => document.getElementById("login-btn")).then(
+      btnLoginCustom => {
+        const hasUser = JSON.parse(localStorage.getItem("user"));
+        if (hasUser) {
+          const loggedUser = hasUser.loggedInUserName;
+
+          if (loggedUser) {
+            btnLoginCustom.innerText = loggedUser;
+            btnLoginCustom.addEventListener(
               "click",
-              () => (location.href = "/profile?module=home-profile")
+              () => (window.location.href = "/profile?module=home-profile")
             );
-          });
+          }
+        } else {
+          btnLoginCustom.addEventListener("click", openLoginModal);
         }
       }
     );

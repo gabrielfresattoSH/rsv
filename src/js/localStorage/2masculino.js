@@ -293,6 +293,10 @@ const masculino = [
               "https://www.usereserva.com/c/adulto/cosm%C3%A9ticos/reserva-cosmeticos-programa-de-reciclagem"
           }
         ]
+      },
+      {
+        title: "IR para o site adulto",
+        href: "https://www.usereserva.com/"
       }
     ]
   }
