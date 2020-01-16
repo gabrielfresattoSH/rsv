@@ -8,7 +8,7 @@
 
 ## Primeiro nível de links do menu estão sem url de destino - OK
 
-## Primeira sugestão da busca está cortado
+## Primeira sugestão da busca está cortado -- OK
 
 ## Depois que escreve uma palavra na busca aba com sugestão não fecha mais, só se apagar toda palavra. Achei ruim mas em produção tb está assim. Gostaria que se clicasse fora do campo e/ou com um x no campo de busca fechasse.
 
