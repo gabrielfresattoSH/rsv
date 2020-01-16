@@ -99,20 +99,13 @@ export default class Menu {
       div.innerHTML = "<a href=" + href + " class='sub-ttl'>" + title + "</a>";
 
       if (subItens) {
-        subItens.forEach((sub, index) => {
-          const { title, subHref } = sub;
-          let html;
-
-          if (index < 10) {
-            html = `<a href="${subHref}" alt="${title}">${title}</a>`;
-          } else {
-            html = `<a href="${href}" alt="Ver todos">Ver todos</a>`;
-          }
-
-          if (index > 10) return;
-
-          div.insertAdjacentHTML("beforeend", html);
-        });
+        subItens
+          .filter((sub, index) => index < 12)
+          .forEach(sub => {
+            const { title, subHref } = sub;
+            const html = `<a href="${subHref}" alt="${title}">${title}</a>`;
+            div.insertAdjacentHTML("beforeend", html);
+          });
       }
 
       // Adiciona a subcategoria ao menu

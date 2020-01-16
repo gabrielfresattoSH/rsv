@@ -235,7 +235,7 @@ const infantil = [
         ]
       },
       {
-        title: "Ofertas Menino",
+        title: "Ofertas",
         href: "https://www.usereserva.com/c/infantil/bazar/mini-bazar-menino",
         itens: [
           {
@@ -287,140 +287,15 @@ const infantil = [
             title: "Sungas",
             href:
               "https://www.usereserva.com/c/infantil/menino/mini-bazar-menino-sungas"
-          }
-        ]
-      },
-      {
-        title: "Ofertas Menina",
-        href: "https://www.usereserva.com/c/infantil/bazar/mini-bazar-menina",
-        itens: [
-          {
-            title: "Blusas",
-            href:
-              "https://www.usereserva.com/c/infantil/menina/mini-bazar-menina-blusas"
           },
           {
-            title: "Shorts",
-            href:
-              "https://www.usereserva.com/c/infantil/menina/mini-bazar-menina-shorts"
-          },
-          {
-            title: "Vestidos",
-            href:
-              "https://www.usereserva.com/c/infantil/menina/mini-bazar-menina-vestidos"
-          },
-          {
-            title: "Saias",
-            href:
-              "https://www.usereserva.com/c/infantil/menina/mini-bazar-menina-saias"
-          },
-          {
-            title: "Camisas",
-            href:
-              "https://www.usereserva.com/c/infantil/menina/mini-bazar-menina-camisas"
-          },
-          {
-            title: "Casacos",
-            href:
-              "https://www.usereserva.com/c/infantil/menina/mini-bazar-menina-casacos"
-          },
-          {
-            title: "Calças",
-            href:
-              "https://www.usereserva.com/c/infantil/menina/mini-bazar-menina-calcas"
-          },
-          {
-            title: "Calçados",
-            href:
-              "https://www.usereserva.com/c/infantil/menina/mini-bazar-menina-calcados"
-          },
-          {
-            title: "Acessórios",
-            href:
-              "https://www.usereserva.com/c/infantil/menina/mini-bazar-menina-acessorios"
-          },
-          {
-            title: "Macacões",
-            href:
-              "https://www.usereserva.com/c/infantil/menina/mini-bazar-menina-macacoes"
-          },
-          {
-            title: "Ver tudo",
+            title: "Ofertas menina",
             href:
               "https://www.usereserva.com/c/infantil/bazar/mini-bazar-menina"
-          }
-        ]
-      },
-      {
-        title: "Ofertas Bebê",
-        href: "https://www.usereserva.com/c/infantil/bazar/mini-bazar-bebe",
-        itens: [
-          {
-            title: "Body",
-            href:
-              "https://www.usereserva.com/c/infantil/beb%C3%AA/mini-bazar-bebe-body"
           },
           {
-            title: "Camisetas",
-            href:
-              "https://www.usereserva.com/c/infantil/beb%C3%AA/mini-bazar-bebe-camisetas"
-          },
-          {
-            title: "Polos",
-            href:
-              "https://www.usereserva.com/c/infantil/beb%C3%AA/mini-bazar-bebe-polos"
-          },
-          {
-            title: "Bermudas",
-            href:
-              "https://www.usereserva.com/c/infantil/beb%C3%AA/mini-bazar-bebe-bermudas"
-          },
-          {
-            title: "Calças",
-            href:
-              "https://www.usereserva.com/c/infantil/beb%C3%AA/mini-bazar-bebe-calcas"
-          },
-          {
-            title: "Camisas",
-            href:
-              "https://www.usereserva.com/c/infantil/beb%C3%AA/mini-bazar-bebe-camisas"
-          },
-          {
-            title: "Calçados",
-            href:
-              "https://www.usereserva.com/c/infantil/beb%C3%AA/mini-bazar-bebe-calcados"
-          },
-          {
-            title: "Casacos",
-            href:
-              "https://www.usereserva.com/c/infantil/beb%C3%AA/mini-bazar-bebe-casacos"
-          },
-          {
-            title: "Acessórios",
-            href:
-              "https://www.usereserva.com/c/infantil/beb%C3%AA/mini-bazar-bebe-acessorios"
-          }
-        ]
-      },
-      {
-        title: "Coleções",
-        href:
-          "https://www.usereserva.com/c/infantil/reserva-mini/mini-colecoes",
-        itens: [
-          {
-            title: "Clássicos",
-            href:
-              "https://www.usereserva.com/c/infantil/cole%C3%A7%C3%B5es/mini-colecoes-classicos"
-          },
-          {
-            title: "Camisetas Básicas",
-            href:
-              "https://www.usereserva.com/c/infantil/cole%C3%A7%C3%B5es/mini-colecoes-camisetas-basicas"
-          },
-          {
-            title: "Irmão e Irmã",
-            href:
-              "https://www.usereserva.com/c/infantil/cole%C3%A7%C3%B5es/mini-colecoes-irma-e-irmao"
+            title: "Ofertas bebê",
+            href: "https://www.usereserva.com/c/infantil/bazar/mini-bazar-bebe"
           }
         ]
       }
