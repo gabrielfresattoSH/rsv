@@ -65,17 +65,19 @@ $c_red: #bf0000;
       align-items: center;
 
       li {
-        border-bottom: 2px solid;
-        border-color: transparent;
-        margin: 0 10px 0 0;
-        padding: 0 5px;
-        font-size: $fontSizeHeader;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: 200ms;
+        a {
+          border-bottom: 2px solid;
+          border-color: transparent;
+          margin: 0 10px 0 0;
+          padding: 0 5px;
+          font-size: $fontSizeHeader;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: 200ms;
 
-        &.active {
-          border-color: #333;
+          &:hover {
+            border-color: #000;
+          }
         }
       }
     }

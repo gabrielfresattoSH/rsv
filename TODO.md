@@ -6,7 +6,7 @@
 
 ## Ajustar crop da foto para mostrar o produto em ofertas (Foto do cara, mostrar a camisa do maluco) -- OK
 
-## Primeiro nível de links do menu estão sem url de destino
+## Primeiro nível de links do menu estão sem url de destino - OK
 
 ## Primeira sugestão da busca está cortado
 

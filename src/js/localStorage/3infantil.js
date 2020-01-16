@@ -1,6 +1,7 @@
 const infantil = [
   {
     title: "Infantil",
+    href: "https://www.usereserva.com/c/infantil/navega%C3%A7%C3%A3o-na-vitrine/infantil",
     bannerInfo: {
       img: "http://juni.com.br/img/reserva/T011/infantil.png",
       header: "A gente cresce junto",

@@ -1,6 +1,7 @@
 const ofertas = [
   {
     title: "Ofertas",
+    href: "https://www.usereserva.com/c/adulto/reserva/reserva-bazar",
     bannerInfo: {
       img: "http://juni.com.br/img/reserva/T011/ofertas.png",
       header: "Descontos irresistíveis",

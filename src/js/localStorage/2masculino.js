@@ -1,6 +1,8 @@
 const masculino = [
   {
     title: "Masculino",
+    href:
+      "https://www.usereserva.com/c/adulto/cole%C3%A7%C3%A3o/reserva-novidades-colecao-camisetas",
     bannerInfo: {
       img: "http://juni.com.br/img/reserva/T011/masculino.png",
       header: "Livre pra ser",

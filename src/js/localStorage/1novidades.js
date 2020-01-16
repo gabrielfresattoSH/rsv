@@ -1,6 +1,7 @@
 const novidades = [
   {
     title: "Novidades",
+    href: "https://www.usereserva.com/c/adulto/reserva/reserva-novidades",
     bannerInfo: {
       img: "",
       header: "",

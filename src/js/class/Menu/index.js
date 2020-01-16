@@ -23,9 +23,9 @@ export default class Menu {
     });
 
     itens.forEach(item => {
-      const { title, bannerInfo, itens } = item;
+      const { title, bannerInfo, itens, href } = item;
       const li = document.createElement("li");
-      li.innerText = item.title;
+      li.innerHTML = `<a href="${href}" alt="${title}">${title}</a>`;
       menuContent.insertAdjacentElement("beforeend", li);
 
       li.addEventListener("mouseover", e => {

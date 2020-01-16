@@ -1,6 +1,7 @@
 const parcerias = [
   {
     title: "Parcerias & Colabes",
+    href: "https://www.usereserva.com/c/adulto/reserva/reserva-colabes",
     bannerInfo: {
       img: "http://juni.com.br/img/reserva/T011/parcerias_colabes.png",
       header: "Marcas que amamos",

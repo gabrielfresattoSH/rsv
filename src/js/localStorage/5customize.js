@@ -1,6 +1,8 @@
 const customize = [
   {
     title: "Customize",
+    href:
+      "https://www.usereserva.com/c/facavc/navega%C3%A7%C3%A3o-na-vitrine/faca-vc",
     bannerInfo: {
       img: "http://juni.com.br/img/reserva/T011/customize.png",
       header: "Você é quem manda",
