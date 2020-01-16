@@ -1,7 +1,8 @@
 const infantil = [
   {
     title: "Infantil",
-    href: "https://www.usereserva.com/c/infantil/navega%C3%A7%C3%A3o-na-vitrine/infantil",
+    href:
+      "https://www.usereserva.com/c/infantil/navega%C3%A7%C3%A3o-na-vitrine/infantil",
     bannerInfo: {
       img: "http://juni.com.br/img/reserva/T011/infantil.png",
       header: "A gente cresce junto",
@@ -401,7 +402,6 @@ const infantil = [
           }
         ]
       },
-
       {
         title: "Coleções",
         href:
@@ -423,24 +423,6 @@ const infantil = [
               "https://www.usereserva.com/c/infantil/cole%C3%A7%C3%B5es/mini-colecoes-irma-e-irmao"
           }
         ]
-      },
-      {
-        title: "Tal pai tal filho",
-        href:
-          "https://www.usereserva.com/c/infantil/reserva-mini/mini-tal-pai-tal-filho",
-        itens: [
-          {
-            title: "",
-            href: ""
-          }
-        ]
-      },
-      {
-        title: "Ir para home infantil",
-        href:
-          "https://www.usereserva.com/c/infantil/navega%C3%A7%C3%A3o-na-vitrine/infantil",
-        itens: [],
-        class: "mb-0"
       }
     ]
   }

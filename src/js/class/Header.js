@@ -105,13 +105,26 @@ export default class Header {
           );
 
           const defaultSearchBtn = document.getElementById("searchSubmit");
+
           // Quando teclar ENTER, realizar a busca
-          document
-            .getElementById("CC-headerWidget-Search")
-            .addEventListener(
-              "keyup",
-              e => e.key === "Enter" && defaultSearchBtn.click()
+          defaultSearchInput.addEventListener(
+            "keyup",
+            e => e.key === "Enter" && defaultSearchBtn.click()
+          );
+
+          defaultSearchInput.addEventListener("blur", e => {
+            // Limpa a busca
+            e.target.value = "";
+
+            //
+            const recommendedSearchIsOpen = document.querySelector(
+              ".rr_auto_complete_search.visible"
             );
+
+            if (recommendedSearchIsOpen) {
+              recommendedSearchIsOpen.classList.remove("visible");
+            }
+          });
 
           // Click no botão buscar
           document

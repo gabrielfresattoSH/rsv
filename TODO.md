@@ -10,10 +10,10 @@
 
 ## Primeira sugestão da busca está cortado -- OK
 
-## Depois que escreve uma palavra na busca aba com sugestão não fecha mais, só se apagar toda palavra. Achei ruim mas em produção tb está assim. Gostaria que se clicasse fora do campo e/ou com um x no campo de busca fechasse.
+## Depois que escreve uma palavra na busca aba com sugestão não fecha mais, só se apagar toda palavra. Achei ruim mas em produção tb está assim. Gostaria que se clicasse fora do campo e/ou com um x no campo de busca fechasse. -- OK
 
-## Enter na busca para confirmar pesquisa não funcionou.
+## Enter na busca para confirmar pesquisa não funcionou. -- OK
 
-## Links home de adulto e mini. Podemos padronizar. Mas acho que no desk se faz menos necessidade desses links na abertura do drop uma vez que temos os links no header que iriam para essas páginas (masculino e infantil).
+## Links home de adulto e mini. Podemos padronizar. Mas acho que no desk se faz menos necessidade desses links na abertura do drop uma vez que temos os links no header que iriam para essas páginas (masculino e infantil). -- OK
 
 ## Link para oficina - isso foi criado para mobile? Aqui não tem mas deveria.
